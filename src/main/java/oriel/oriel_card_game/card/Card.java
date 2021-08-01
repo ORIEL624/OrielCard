@@ -1,4 +1,4 @@
-package oriel.oriel_card.core.card;
+package oriel.oriel_card_game.card;
 
 import java.util.UUID;
 

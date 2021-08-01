@@ -1,21 +1,21 @@
-package oriel.oriel_card;
+package oriel;
 
 import java.util.LinkedList;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import oriel.oriel_card.core.OrielCardGame;
-import oriel.oriel_card.core.card.Card;
-import oriel.oriel_card.core.card_deck.CardDeck;
-import oriel.oriel_card.core.hand_card.HandCard;
-import oriel.oriel_card.core.hit_point.HitPoint;
-import oriel.oriel_card.core.player.AttackCardSelector;
-import oriel.oriel_card.core.player.DefenceCardSelector;
-import oriel.oriel_card.core.player.Player;
-import oriel.oriel_card.core.player.PutCardSelector;
-import oriel.oriel_card.impl.console.player.ConsoleAttackCardSelector;
-import oriel.oriel_card.impl.console.player.ConsoleDefenceCardSelector;
-import oriel.oriel_card.impl.console.player.ConsolePutCardSelector;
+import oriel.console.oriel_card_game.player.ConsoleAttackCardSelector;
+import oriel.console.oriel_card_game.player.ConsoleDefenceCardSelector;
+import oriel.console.oriel_card_game.player.ConsolePutCardSelector;
+import oriel.oriel_card_game.OrielCardGame;
+import oriel.oriel_card_game.card.Card;
+import oriel.oriel_card_game.player.AttackCardSelector;
+import oriel.oriel_card_game.player.DefenceCardSelector;
+import oriel.oriel_card_game.player.Player;
+import oriel.oriel_card_game.player.PutCardSelector;
+import oriel.oriel_card_game.player.card_deck.CardDeck;
+import oriel.oriel_card_game.player.hand_card.HandCard;
+import oriel.oriel_card_game.player.hit_point.HitPoint;
 
 @SpringBootApplication
 public class OrielCardApplication {

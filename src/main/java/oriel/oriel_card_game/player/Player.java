@@ -1,4 +1,4 @@
-package oriel.oriel_card.core.player;
+package oriel.oriel_card_game.player;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -9,12 +9,12 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 import lombok.ToString;
-import oriel.oriel_card.core.battle_field.BattleField;
-import oriel.oriel_card.core.card.Attack;
-import oriel.oriel_card.core.card.Card;
-import oriel.oriel_card.core.card_deck.CardDeck;
-import oriel.oriel_card.core.hand_card.HandCard;
-import oriel.oriel_card.core.hit_point.HitPoint;
+import oriel.oriel_card_game.card.Attack;
+import oriel.oriel_card_game.card.Card;
+import oriel.oriel_card_game.player.battle_field.BattleField;
+import oriel.oriel_card_game.player.card_deck.CardDeck;
+import oriel.oriel_card_game.player.hand_card.HandCard;
+import oriel.oriel_card_game.player.hit_point.HitPoint;
 
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")

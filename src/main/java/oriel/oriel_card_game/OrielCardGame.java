@@ -1,6 +1,6 @@
-package oriel.oriel_card.core;
+package oriel.oriel_card_game;
 
-import oriel.oriel_card.core.player.Player;
+import oriel.oriel_card_game.player.Player;
 
 public class OrielCardGame {
 

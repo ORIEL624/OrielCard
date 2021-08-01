@@ -1,8 +1,8 @@
-package oriel.oriel_card.core.player;
+package oriel.oriel_card_game.player;
 
 import java.util.Optional;
 
-import oriel.oriel_card.core.card.Card;
+import oriel.oriel_card_game.card.Card;
 
 public interface DefenceCardSelector {
 

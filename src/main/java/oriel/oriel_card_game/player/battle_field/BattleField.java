@@ -1,12 +1,15 @@
-package oriel.oriel_card.core.battle_field;
+package oriel.oriel_card_game.player.battle_field;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 import lombok.NonNull;
-import oriel.oriel_card.core.card.Card;
+import oriel.oriel_card_game.card.Card;
 
+/**
+ * 場.
+ */
 public class BattleField {
 
 	private final LinkedList<Card> cardList = new LinkedList<>();

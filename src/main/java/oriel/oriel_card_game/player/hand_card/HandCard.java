@@ -1,11 +1,14 @@
-package oriel.oriel_card.core.hand_card;
+package oriel.oriel_card_game.player.hand_card;
 
 import java.util.LinkedList;
 import java.util.stream.Stream;
 
 import lombok.NonNull;
-import oriel.oriel_card.core.card.Card;
+import oriel.oriel_card_game.card.Card;
 
+/**
+ * 手札.
+ */
 public class HandCard {
 
 	private final LinkedList<Card> cardList = new LinkedList<Card>();

@@ -1,11 +1,14 @@
-package oriel.oriel_card.core.card_deck;
+package oriel.oriel_card_game.player.card_deck;
 
 import java.util.Collections;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
-import oriel.oriel_card.core.card.Card;
+import oriel.oriel_card_game.card.Card;
 
+/**
+ * デッキ.
+ */
 @AllArgsConstructor
 public class CardDeck {
 

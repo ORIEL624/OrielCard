@@ -1,8 +1,11 @@
-package oriel.oriel_card.core.hit_point;
+package oriel.oriel_card_game.player.hit_point;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * プレイヤーの体力.
+ */
 @Data
 @AllArgsConstructor
 public class HitPoint {
