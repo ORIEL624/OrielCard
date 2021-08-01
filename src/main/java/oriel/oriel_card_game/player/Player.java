@@ -3,20 +3,21 @@ package oriel.oriel_card_game.player;
 import java.util.Optional;
 import java.util.UUID;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import oriel.oriel_card_game.card.Attack;
 import oriel.oriel_card_game.card.Card;
+import oriel.oriel_card_game.card.Defence;
 import oriel.oriel_card_game.player.battle_field.BattleField;
 import oriel.oriel_card_game.player.card_deck.CardDeck;
 import oriel.oriel_card_game.player.hand_card.HandCard;
 import oriel.oriel_card_game.player.hit_point.HitPoint;
+import oriel.oriel_card_game.player.name.Name;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @EqualsAndHashCode(of = "id")
 @ToString(of = { "name", "hitPoint" })
 public class Player {
@@ -26,11 +27,11 @@ public class Player {
 
 	@Getter
 	@NonNull
-	private final String name;
+	private final Name name;
 
 	@Getter
 	@NonNull
-	private final HitPoint hitPoint;
+	private HitPoint hitPoint = new HitPoint(8000);
 
 	@Getter
 	@NonNull
@@ -80,12 +81,12 @@ public class Player {
 
 	private void attack(Player enemy) {
 		this.attackCardSelector.select(this, enemy).ifPresent(attackCard -> {
-			// 攻撃を受ける側の視点になるので、自身と相手が入れ替わることに注意.
 			enemy.receiveAttack(this, attackCard);
 		});
 	}
 
 	private void receiveAttack(Player enemy, Card attackCard) {
+		// 攻撃を受ける側の視点に切り替わっていることに注意.
 
 		final Optional<Card> defencer = this.defenceCardSelector.select(this, enemy, attackCard);
 
@@ -98,9 +99,9 @@ public class Player {
 
 	private void defence(Card attacker, Card defencer) {
 
-		final Attack attack = attacker.attack(defencer);
+		final Defence attack = defencer.defence(attacker);
 
-		this.hitPoint.takeDamage(attack.getPenetrationDamage());
+		this.hitPoint = this.hitPoint.takeDamage(attack.getPenetrationDamage());
 
 		if (attack.isDefencerDead()) {
 			this.battleField.remove(defencer);
@@ -108,6 +109,6 @@ public class Player {
 	}
 
 	private void receiveAttackDirectly(Card attacker) {
-		this.hitPoint.takeDamage(attacker.getAttackPower().getValue());
+		this.hitPoint = this.hitPoint.takeDamage(attacker.getAttackPower().getValue());
 	}
 }

@@ -1,9 +1,11 @@
 package oriel.oriel_card_game.card;
 
 import lombok.AllArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @AllArgsConstructor
-public class Attack {
+public class Defence {
 
 	private final Card attacker;
 	

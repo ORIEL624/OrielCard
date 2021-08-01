@@ -1,24 +1,26 @@
 package oriel.oriel_card_game.player.card_deck;
 
 import java.util.Collections;
-import java.util.List;
+import java.util.LinkedList;
 
-import lombok.AllArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
 import oriel.oriel_card_game.card.Card;
 
-/**
- * デッキ.
- */
-@AllArgsConstructor
+@ToString
 public class CardDeck {
 
-	private final List<Card> cardList;
+	private final LinkedList<Card> cardList = new LinkedList<>();
+	
+	public void add(@NonNull Card card) {
+		this.cardList.add(card);
+	}
 
 	public Card draw() {
 		if (this.isEmpty()) {
-			throw new NoCardException();
+			throw new EmptyCardDeckException();
 		}
-
+		
 		return this.cardList.remove(0);
 	}
 
@@ -30,8 +32,7 @@ public class CardDeck {
 		return !this.isEmpty();
 	}
 	
-	public CardDeck shuffle() {
+	public void shuffle() {
 		Collections.shuffle(this.cardList);
-		return this;
 	}
 }

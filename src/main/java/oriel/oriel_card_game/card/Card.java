@@ -26,7 +26,7 @@ public class Card {
 	@Getter
 	private final DefencePower defencePower;
 
-	public Attack attack(Card target) {
-		return new Attack(this, target);
+	public Defence defence(Card enemy) {
+		return new Defence(enemy, this);
 	}
 }
