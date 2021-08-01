@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import oriel.oriel_card.core.OrielCardGame;
 import oriel.oriel_card.core.card.Card;
 import oriel.oriel_card.core.card_deck.CardDeck;
 import oriel.oriel_card.core.hand_card.HandCard;

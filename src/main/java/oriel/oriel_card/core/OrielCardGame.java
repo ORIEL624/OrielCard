@@ -1,4 +1,4 @@
-package oriel.oriel_card;
+package oriel.oriel_card.core;
 
 import oriel.oriel_card.core.player.Player;
 
