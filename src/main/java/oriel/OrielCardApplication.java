@@ -9,6 +9,9 @@ import oriel.console_oriel_card_game.player.ConsoleDefenceCardSelector;
 import oriel.console_oriel_card_game.player.ConsolePutCardSelector;
 import oriel.oriel_card_game.OrielCardGame;
 import oriel.oriel_card_game.card.Card;
+import oriel.oriel_card_game.card.attack_power.AttackPower;
+import oriel.oriel_card_game.card.defence_power.DefencePower;
+import oriel.oriel_card_game.card.name.Name;
 import oriel.oriel_card_game.player.AttackCardSelector;
 import oriel.oriel_card_game.player.DefenceCardSelector;
 import oriel.oriel_card_game.player.Player;
@@ -28,23 +31,23 @@ public class OrielCardApplication {
 	public static CardDeck newCardDeck() {
 		
 		final LinkedList<Card> cardList = new LinkedList<>();
-		cardList.add(new Card("ドラゴン1", 2300, 2000));
-		cardList.add(new Card("ドラゴン2", 2300, 2000));
-		cardList.add(new Card("エルフ1", 1000, 500));
-		cardList.add(new Card("エルフ2", 1000, 500));
-		cardList.add(new Card("エルフ3", 1000, 500));
-		cardList.add(new Card("エルフ4", 1000, 500));
-		cardList.add(new Card("エルフ5", 1000, 500));
-		cardList.add(new Card("ドワーフ1", 500, 1000));
-		cardList.add(new Card("ドワーフ2", 500, 1000));
-		cardList.add(new Card("ドワーフ3", 500, 1000));
-		cardList.add(new Card("ドワーフ4", 500, 1000));
-		cardList.add(new Card("ドワーフ5", 500, 1000));
-		cardList.add(new Card("ドワーフ6", 500, 1000));
-		cardList.add(new Card("ドワーフ7", 500, 1000));
-		cardList.add(new Card("ドワーフ8", 500, 1000));
-		cardList.add(new Card("ドワーフ9", 500, 1000));
-		cardList.add(new Card("ドワーフ10", 500, 1000));
+		cardList.add(new Card(new Name("ドラゴン1"), new AttackPower(2300), new DefencePower(2000)));
+		cardList.add(new Card(new Name("ドラゴン2"), new AttackPower(2300), new DefencePower(2000)));
+		cardList.add(new Card(new Name("エルフ1"), new AttackPower(1000), new DefencePower(500)));
+		cardList.add(new Card(new Name("エルフ2"), new AttackPower(1000), new DefencePower(500)));
+		cardList.add(new Card(new Name("エルフ3"), new AttackPower(1000), new DefencePower(500)));
+		cardList.add(new Card(new Name("エルフ4"), new AttackPower(1000), new DefencePower(500)));
+		cardList.add(new Card(new Name("エルフ5"), new AttackPower(1000), new DefencePower(500)));
+		cardList.add(new Card(new Name("ドワーフ1"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ2"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ3"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ4"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ5"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ6"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ7"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ8"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ9"), new AttackPower(500), new DefencePower(1000)));
+		cardList.add(new Card(new Name("ドワーフ10"), new AttackPower(500), new DefencePower(1000)));
 		
 		return new CardDeck(cardList);
 	}

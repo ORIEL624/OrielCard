@@ -10,7 +10,7 @@ public class Attack {
 	private final Card defencer;
 	
 	public int getPenetrationDamage() {
-		return Math.max(this.attacker.getAttackPower() - this.defencer.getDefencePower(), 0);
+		return Math.max(this.attacker.getAttackPower().getValue() - this.defencer.getDefencePower().getValue(), 0);
 	}
 	
 	public boolean isDefencerDead() {

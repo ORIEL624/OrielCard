@@ -108,6 +108,6 @@ public class Player {
 	}
 
 	private void receiveAttackDirectly(Card attacker) {
-		this.hitPoint.takeDamage(attacker.getAttackPower());
+		this.hitPoint.takeDamage(attacker.getAttackPower().getValue());
 	}
 }
