@@ -1,4 +1,4 @@
-package oriel.console.oriel_card_game.player;
+package oriel.console_oriel_card_game.player;
 
 import java.util.Optional;
 import java.util.Scanner;

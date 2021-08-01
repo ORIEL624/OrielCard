@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import oriel.console.oriel_card_game.player.ConsoleAttackCardSelector;
-import oriel.console.oriel_card_game.player.ConsoleDefenceCardSelector;
-import oriel.console.oriel_card_game.player.ConsolePutCardSelector;
+import oriel.console_oriel_card_game.player.ConsoleAttackCardSelector;
+import oriel.console_oriel_card_game.player.ConsoleDefenceCardSelector;
+import oriel.console_oriel_card_game.player.ConsolePutCardSelector;
 import oriel.oriel_card_game.OrielCardGame;
 import oriel.oriel_card_game.card.Card;
 import oriel.oriel_card_game.player.AttackCardSelector;

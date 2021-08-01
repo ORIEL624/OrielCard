@@ -8,7 +8,7 @@ import lombok.NonNull;
 import oriel.oriel_card_game.card.Card;
 
 /**
- * 場.
+ * 闘技場.
  */
 public class BattleField {
 
